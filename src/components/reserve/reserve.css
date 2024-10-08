@@ -1,0 +1,154 @@
+@media screen and (max-width: 768px) {
+  .reserve {
+    padding: 10px;
+  }
+
+  .rContainer {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .rItem {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .rInfo {
+    width: 100%;
+  }
+
+  .rSelectRooms {
+    justify-content: center;
+  }
+}
+
+.reserve {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.418);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rContainer {
+  background-color: white;
+  padding: 20px;
+  position: relative;
+  max-width: 600px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.rClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.rItem {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 20px;
+}
+
+.rInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.rTitle {
+  font-weight: 600;
+  font-size: 1.2em;
+  letter-spacing: 0.5px;
+}
+
+.rDesc {
+  font-weight: 500;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.rMax {
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.rPrice {
+  font-weight: 600;
+  color: #0071c2;
+}
+
+.rSelectRooms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-size: 0.9em;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+.room {
+  display: flex;
+  flex-direction: column;
+}
+
+.rButton {
+  border: none;
+  padding: 10px 20px;
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 20px;
+  align-self: center;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.rButton:hover {
+  background-color: #005fa3;
+}
+
+.rSelectRooms input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+@media screen and (max-width: 480px) {
+  .rContainer {
+    width: 95%;
+  }
+
+  .rItem {
+    padding: 10px 0;
+  }
+
+  .rSelectRooms {
+    font-size: 0.8em;
+  }
+
+  .rButton {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+
+  .rSelectRooms input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+  }
+}

@@ -1,0 +1,194 @@
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #003580;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fbfcfa;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .logo:hover {
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .navItems {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .userSection {
+    display: flex;
+    align-items: center;
+  }
+
+  .username {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #fdfcfc;
+    margin-right: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+    position: relative;
+    padding: 0.4rem 0.8rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    min-width: 80px;
+    box-sizing: border-box;
+  }
+
+  .username > *:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+
+  .username:hover {
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .navButton-login,
+  .navButton-signup {
+    padding: 0.4rem 0.8rem;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 0.9rem;
+    min-width: 80px;
+  }
+
+  .navButton-login {
+    background-color: #007bff;
+    margin-right: 0.6rem;
+  }
+
+  .navButton-signup {
+    background-color: #28a745;
+    margin-left: 0.6rem;
+  }
+
+  .navButton-login:hover,
+  .navButton-signup:hover,
+  .username:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .navButton-login:hover {
+    background-color: #0056b3;
+  }
+
+  .navButton-signup:hover {
+    background-color: #218838;
+  }
+
+  .navButton-login:active,
+  .navButton-signup:active,
+  .username:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 0.5rem 1rem;
+    }
+
+    .navContainer {
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      margin-bottom: 0;
+      font-size: 1.5rem;
+      text-align: left;
+    }
+
+    .navItems {
+      flex-direction: row;
+      width: auto;
+      margin-left: auto;
+    }
+
+    .userSection {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .username,
+    .navButton-login,
+    .navButton-signup {
+      margin-top: 0;
+      width: auto;
+      text-align: center;
+    }
+
+    .navButton-login,
+    .navButton-signup,
+    .username {
+      margin-right: 0.3rem;
+      margin-left: 0.3rem;
+      margin-bottom: 0;
+      padding: 0.4rem 0.6rem;
+      font-size: 0.8rem;
+      min-width: 70px;
+    }
+
+    .navButton-signup {
+      margin-bottom: 0;
+    }
+
+    .username > *:not(:last-child) {
+      margin-right: 0.3rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo {
+      font-size: 1.3rem;
+    }
+
+    .navButton-login,
+    .navButton-signup,
+    .username {
+      font-size: 0.7rem;
+      padding: 0.4rem 0.6rem;
+      min-width: 60px;
+    }
+
+    .username > *:not(:last-child) {
+      margin-right: 0.2rem;
+    }
+  }

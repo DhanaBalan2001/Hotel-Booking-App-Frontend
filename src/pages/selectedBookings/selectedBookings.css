@@ -1,0 +1,199 @@
+  .selected-bookings {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+  }
+
+  .bookings-title {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+  }
+
+  .bookings-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+  }
+
+  .booking-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      transition: transform 0.3s ease;
+  }
+
+  .booking-card:hover {
+      transform: translateY(-5px);
+  }
+
+  .hotel-name {
+      font-size: 1.5rem;
+      color: #2c3e50;
+      margin-bottom: 10px;
+  }
+
+  .booking-details {
+      font-size: 1rem;
+      color: #7f8c8d;
+      margin-bottom: 15px;
+  }
+
+  .total-price {
+      font-size: 1.2rem;
+      color: #27ae60;
+      font-weight: bold;
+      margin-bottom: 15px;
+  }
+
+  .payment-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+  }
+
+  .total-amount {
+      font-size: 1.3rem;
+      color: #2c3e50;
+      font-weight: bold;
+  }
+
+  .pay-button {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+
+  .pay-button:hover {
+      background-color: #2980b9;
+  }
+
+  .booking-confirmation {
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      margin-top: 30px;
+      text-align: center;
+      transition: transform 0.3s ease;
+  }
+
+  .booking-confirmation:hover {
+      transform: translateY(-5px);
+  }
+
+  .confirmation-title {
+      font-size: 2.2rem;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      font-weight: bold;
+  }
+
+  .confirmation-message {
+      font-size: 1.2rem;
+      color: #34495e;
+      line-height: 1.6;
+      margin-bottom: 25px;
+  }
+
+  .confirmed-booking {
+      background-color: #e8f5e9;
+      border: 2px solid #4caf50;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 20px;
+  }
+
+  .confirmed-booking .hotel-name {
+      color: #1b5e20;
+  }
+
+  .confirmed-booking .booking-details {
+      color: #2e7d32;
+  }
+
+  .confirmed-booking .total-price {
+      color: #1b5e20;
+      font-size: 1.3rem;
+  }
+
+  .return-home-button {
+      display: inline-block;
+      background-color: #e74c3c;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      margin-top: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .return-home-button:hover {
+      background-color: #c0392b;
+      transform: translateY(-2px);
+  }
+
+  .return-home-button:active {
+      transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+      .bookings-grid {
+          grid-template-columns: 1fr;
+      }
+
+      .booking-card {
+          padding: 15px;
+      }
+
+      .hotel-name {
+          font-size: 1.3rem;
+      }
+
+      .booking-details {
+          font-size: 0.9rem;
+      }
+
+      .total-price {
+          font-size: 1.1rem;
+      }
+
+      .total-amount {
+          font-size: 1.2rem;
+      }
+
+      .pay-button {
+          padding: 8px 16px;
+      }
+
+      .booking-confirmation {
+          padding: 20px;
+      }
+
+      .confirmation-title {
+          font-size: 1.8rem;
+      }
+
+      .confirmation-message {
+          font-size: 1rem;
+      }
+
+      .confirmed-booking {
+          padding: 15px;
+      }
+
+      .return-home-button {
+          font-size: 1rem;
+          padding: 10px 20px;
+      }
+  }

@@ -1,0 +1,258 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.lcontainer {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.lcontent {
+  flex: 1;
+  padding: 50px;
+  z-index: 1;
+}
+
+.ltitle {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: #1877f2;
+}
+
+.lsubtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 35px;
+}
+
+.lform {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+.input-icon-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #777;
+  font-size: 1.1rem;
+}
+
+.linput {
+  width: 95%;
+  padding: 10px 10px 10px 35px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.linput:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.lbutton {
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.lbutton:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.signup-button {
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+.signup-button:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.error-message {
+  color: #ff4444;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.limage {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.himage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.limage:hover .himage {
+  transform: scale(1.05);
+}
+
+.ioverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.limage:hover .ioverlay {
+  opacity: 1;
+}
+
+.ioverlay h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.ioverlay ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.ioverlay li {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #777;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-toggle:hover {
+  color: #007bff;
+}
+
+.password-toggle:focus {
+  outline: none;
+}
+
+.password-toggle i {
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .lcontainer {
+    flex-direction: column;
+  }
+
+  .limage {
+    display: none;
+  }
+
+  .lcontent {
+    padding: 30px;
+  }
+
+  .ltitle {
+    font-size: 2.2rem;
+  }
+
+  .input-icon {
+    font-size: 1rem;
+  }
+
+  .password-toggle {
+    font-size: 1rem;
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ltitle {
+    font-size: 1.8rem;
+  }
+
+  .lsubtitle {
+    font-size: 1rem;
+  }
+
+  .linput,
+  .lbutton,
+  .signup-button {
+    padding: 9px;
+  }
+
+  .input-icon-wrapper {
+    margin-bottom: 15px;
+  }
+
+  .input-icon {
+    font-size: 0.9rem;
+    left: 9px;
+  }
+
+  .linput {
+    padding: 9px 9px 9px 30px;
+    font-size: 0.85rem;
+  }
+
+  .password-toggle {
+    font-size: 0.9rem;
+    right: 8px;
+  }
+}

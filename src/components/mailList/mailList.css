@@ -1,0 +1,135 @@
+  .mail {
+      width: 100%;
+      margin-top: 50px;
+      background: linear-gradient(135deg, #003580, #0071c2);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: clamp(30px, 5vw, 60px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      transition: all 0.3s ease;
+  }
+
+  .mailTitle {
+      font-size: clamp(24px, 4vw, 32px);
+      font-weight: 700;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      letter-spacing: 1px;
+      text-align: center;
+  }
+
+  .mailDesc {
+      font-size: clamp(16px, 2.5vw, 18px);
+      max-width: 90%;
+      text-align: center;
+      line-height: 1.8;
+      opacity: 0.9;
+  }
+
+  .mailInputContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 550px;
+      flex-wrap: wrap;
+  }
+
+  .mailInputContainer > input {
+      width: clamp(200px, 70%, 100%);
+      height: 55px;
+      padding: 10px 20px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      border-radius: 30px;
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+  }
+
+  .mailInputContainer > input:focus {
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+      transform: scale(1.02);
+  }
+
+  .subscribeButton {
+      height: 55px;
+      background-color: #ff6b6b;
+      color: white;
+      font-weight: 600;
+      border: none;
+      padding: 0 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 15px;
+      width: clamp(150px, 30%, 200px);
+  }
+
+  .subscribeButton:hover {
+      background-color: #ff5252;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .subscribeButton:active {
+      transform: translateY(1px);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (min-width: 769px) {
+      .mailInputContainer {
+          flex-wrap: nowrap;
+      }
+
+      .mailInputContainer > input {
+          border-radius: 30px 0 0 30px;
+      }
+
+      .subscribeButton {
+          border-radius: 0 30px 30px 0;
+          margin-top: 0;
+      }
+  }
+
+  @media (max-width: 768px) {
+      .mail {
+          padding: clamp(20px, 4vw, 40px);
+      }
+
+      .mailInputContainer {
+          flex-direction: column;
+          align-items: center;
+      }
+
+      .mailInputContainer > input {
+          width: 100%;
+          margin-bottom: 15px;
+      }
+
+      .subscribeButton {
+          width: 60%;
+      }
+  }
+
+  @media (max-width: 480px) {
+      .mailTitle {
+          font-size: 22px;
+      }
+
+      .mailDesc {
+          font-size: 14px;
+      }
+
+      .subscribeButton {
+          width: 80%;
+      }
+  }

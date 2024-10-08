@@ -1,0 +1,224 @@
+  .register {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+  }
+
+  .rContainer {
+    display: flex;
+    flex-direction: row;
+    width: min(90%, 1200px);
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .rcontent {
+    flex: 1;
+    padding: clamp(20px, 5vw, 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .rtitle {
+    font-size: clamp(24px, 5vw, 32px);
+    font-weight: bold;
+    color: #1877f2;
+    margin-bottom: 10px;
+  }
+
+  .rsubtitle {
+    font-size: clamp(16px, 3vw, 18px);
+    color: #606770;
+    margin-bottom: 30px;
+  }
+
+  .rform {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .rinput {
+    padding: 12px 40px;
+    border: 1px solid #dddfe2;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .rinput:focus {
+    outline: none;
+    border-color: #1877f2;
+    box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+  }
+
+  .input-icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #606770;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    pointer-events: none;
+  }
+
+  .input-icon-wrapper:focus-within .input-icon {
+    color: #1877f2;
+  }
+
+  .rinput[type="password"] {
+    padding-right: 40px;
+  }
+
+  .password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: #606770;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+
+  .password-toggle:hover {
+    color: #1877f2;
+  }
+
+  .password-toggle:focus {
+    outline: none;
+  }
+
+  .password-toggle i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button {
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button:hover {
+    background-color: #166fe5;
+  }
+
+  button:active {
+    transform: scale(0.98);
+  }
+
+  .error-message {
+    color: #ff3333;
+    margin-top: 10px;
+    font-size: 14px;
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  }
+
+  @keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
+  }
+
+  .rimage {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .rimage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .rimage:hover img {
+    transform: scale(1.05);
+  }
+
+  .ioverlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: clamp(18px, 4vw, 24px);
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .rimage:hover .ioverlay {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .rContainer {
+      width: 95%;
+      flex-direction: column;
+    }
+
+    .rimage {
+      display: block;
+      height: 200px;
+    }
+
+    .input-icon {
+      font-size: 16px;
+    }
+
+    .rinput {
+      padding-left: 40px;
+    }
+
+    .password-toggle {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .rContainer {
+      width: 80%;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
